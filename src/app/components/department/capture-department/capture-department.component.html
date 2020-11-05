@@ -1,0 +1,28 @@
+<p></p>
+<div class="border border-light p-5">
+    <h4 class="card-title text-center"> Capture Department </h4>
+
+    <div class="row">
+
+        <label>Name</label>
+        <input type="text" class="form-control mb-4" [(ngModel)]="department.name" placeholder="Enter Name">
+
+        <label>Description</label>
+        <input type="text" class="form-control mb-4" [(ngModel)]="department.description" placeholder="Enter Description">
+
+        <label>Facaulty</label>
+        <select class="browser-default custom-select mb-4" [(ngModel)]="department.facaultyId">
+            <option value="" disabled>Choose option</option>
+            <option *ngFor="let item of facaulties" [ngValue]="item.id">{{item.name}}</option>
+        </select>
+
+    </div>
+
+    <div class="validation">
+        <span *ngIf="validation.isValid(department)" class="error">{{validation.getError()}}</span>
+        <button mdbBtn color="unique" class="my-2 col-4" (click)="onSubmit()"
+            [disabled]="validation.isValid(department)">Submit
+        </button>
+    </div>
+
+</div>

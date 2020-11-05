@@ -1,6 +1,6 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark blue darken-4">
     <mdb-navbar-brand>
-        <a href="#" class="navbar-brand">Nyax User App with Temp Json</a>
+        <a href="#" class="navbar-brand">Student Lecturer Appointment System</a>
     </mdb-navbar-brand>
     <links>
         <ul class="navbar-nav mr-auto">
@@ -9,15 +9,21 @@
             <li class="nav-item">
                 <a class="nav-link waves-light" mdbWavesEffect routerLink="facaulty" routerLinkActive="active"> Facaulties </a>
             </li>
-            <li class="nav-item float-left">
-                <a class="nav-link waves-light float-left" mdbWavesEffect disabled="true"> getUsername() </a>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="department" routerLinkActive="active"> Departments </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="program" routerLinkActive="active"> Programs </a>
+            </li>
+            <!-- <li class="nav-item float-left">
+                <a class="nav-link waves-light float-left" mdbWavesEffect disabled="true"> getUsername() </a>
+            </li> -->
             <!-- <li *ngIf="userDetails.isAdmin" class="nav-item float-left">
                 <a class="nav-link waves-light float-left" mdbWavesEffect disabled="true"> ADMIN </a>
             </li> -->
-            <li  class="nav-item float-left">
+            <!-- <li  class="nav-item float-left">
                 <a class="nav-link waves-light float-left" mdbWavesEffect disabled="true"> ADMIN </a>
-            </li>
+            </li> -->
             <li class="nav-item float-left">
               <a class="nav-link waves-light float-left" mdbWavesEffect (click)="logout()"> Logout </a>
           </li>

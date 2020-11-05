@@ -1,1 +1,11 @@
-<p>department works!</p>
+<p></p>
+<div class="row ">
+    <app-table-view [data]="tableData" [add]="'true'" [title]="'Department Details'" (itemClick)="itemClick($event)"
+        (addClick)="addClick()" class="col-6" [entries]="15"></app-table-view>
+
+    <app-form-view [buttons]="true" [form]="selected" [title]="'Department'" class="col-6" *ngIf="!isAdd && selected"
+        [headers]="tableData.headers" (edit)="editClick($event)" (delete)="deleteClick($event)"></app-form-view>
+
+    <app-capture-department *ngIf="isAdd && selected" class="col 6" [department]="selected" (data)=" reload($event)">
+    </app-capture-department>
+</div>

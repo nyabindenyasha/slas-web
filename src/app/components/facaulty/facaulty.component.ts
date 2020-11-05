@@ -36,6 +36,7 @@ export class FacaultyComponent implements OnInit {
     this.tableData = new TableCompose()
       .composeHeader('id', ' Id ', DataType.Plain)
       .composeHeader('name', ' Facaulty', DataType.Plain)
+      .composeHeader('description', ' Description', DataType.Plain)
       .setBody(this.facaultyDetails);
   }
 
@@ -56,6 +57,7 @@ export class FacaultyComponent implements OnInit {
 
   deleteClick(item: Facaulty) {
     this.http.delete('/v1/facaulty/' + item.id, (result) => {
+      console.log(result);      
       swal.fire('', result.message, 'success');
       console.log(result);
       this.reload(result)

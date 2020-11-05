@@ -24,6 +24,10 @@ import { TimeSlotsComponent } from './components/time-slots/time-slots.component
 import { HttpClientModule } from '@angular/common/http';
 import { HttpRequestComponent } from './provider/http-request/http-request.component';
 import { CaptureFacaultyComponent } from './components/facaulty/capture-facaulty/capture-facaulty.component';
+import { CaptureDepartmentComponent } from './components/department/capture-department/capture-department.component';
+import { CaptureProgramsComponent } from './components/programs/capture-programs/capture-programs.component';
+import { CaptureAppointmentComponent } from './components/appointments/capture-appointment/capture-appointment.component';
+import { CaptureTimeSlotsComponent } from './components/time-slots/capture-time-slots/capture-time-slots.component';
 
 
 @NgModule({
@@ -43,7 +47,11 @@ import { CaptureFacaultyComponent } from './components/facaulty/capture-facaulty
     SlasHomeComponent,
     TimeSlotsComponent,
     HttpRequestComponent,
-    CaptureFacaultyComponent
+    CaptureFacaultyComponent,
+    CaptureDepartmentComponent,
+    CaptureProgramsComponent,
+    CaptureAppointmentComponent,
+    CaptureTimeSlotsComponent
   ],
   imports: [
     BrowserModule,
