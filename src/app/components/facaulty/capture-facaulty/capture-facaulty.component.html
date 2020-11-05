@@ -1,0 +1,22 @@
+<p></p>
+<div class="border border-light p-5">
+  <h4 class="card-title text-center"> Capture Facaulty </h4>
+
+  <div class="row">
+
+      <label>Name</label>
+      <input type="text" class="form-control mb-4" [(ngModel)]="facaulty.name" placeholder="Enter Name">
+
+      <label>Description</label>
+      <input type="text" class="form-control mb-4" [(ngModel)]="facaulty.description" placeholder="Enter Description">
+
+  </div>
+
+  <div class="validation">
+    <span *ngIf="validation.isValid(facaulty)" class="error">{{validation.getError()}}</span>
+    <button mdbBtn color="unique" class="my-2 col-4" (click)="onSubmit()"
+      [disabled]="validation.isValid(facaulty)">Submit
+    </button>
+  </div>
+
+</div>
